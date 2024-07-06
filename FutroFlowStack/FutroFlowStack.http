@@ -1,0 +1,6 @@
+@FutroFlowStack_HostAddress = http://localhost:5178
+
+GET {{FutroFlowStack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
