@@ -16,8 +16,6 @@
 
   <ItemGroup>
     <Folder Include="DTO\" />
-    <Folder Include="ServiceInterface\" />
-    <Folder Include="Service\" />
   </ItemGroup>
 
 </Project>
