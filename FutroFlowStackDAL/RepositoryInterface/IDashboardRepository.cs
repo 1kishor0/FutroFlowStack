@@ -8,5 +8,7 @@ namespace FutroFlowStackDAL.RepositoryInterface
 {
     public interface IDashboardRepository
     {
+        Task<object> GetHomePage(int Token);
+
     }
 }

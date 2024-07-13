@@ -8,5 +8,6 @@ namespace FutroFlowStackBLL.ServiceInterface
 {
     public interface IDashboardService
     {
+        Task<object> GetHomePage(int Token);
     }
 }

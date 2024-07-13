@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FutroFlowStackBLL\FutroFlowStackBLL.csproj" />
+    <ProjectReference Include="..\FutroFlowStackDAL\FutroFlowStackDAL.csproj" />
   </ItemGroup>
 
 </Project>

@@ -19,5 +19,11 @@ namespace FutroFlowStackBLL.Service
             _mapper = mapper;
             _Dashboardrepository = repository;
         }
+
+
+        public async Task<object> GetHomePage(int token)
+        {
+            return await _Dashboardrepository.GetHomePage(token);
+        }
     }
 }

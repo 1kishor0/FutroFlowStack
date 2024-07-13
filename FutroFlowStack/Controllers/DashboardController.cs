@@ -1,6 +1,7 @@
 ﻿using FutroFlowStackBLL.ServiceInterface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace FutroFlowStack.Controllers
 {
@@ -19,10 +20,18 @@ namespace FutroFlowStack.Controllers
 
         [HttpPost]
         [Route("GetHomePage")]
-        public IActionResult GetHomePage(int token)
+        public async Task<IActionResult> GetHomePage(int token)
         {
-            return Ok(token+20);
 
+            try
+            {
+                var Token = await _Dashboardservice.GetHomePage(token);
+                return Ok(Token);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
 
         }
     }
