@@ -1,5 +1,9 @@
 ﻿using AutoMapper;
 using FutroFlowStackBLL.MappingProfile;
+using FutroFlowStackBLL.Service;
+using FutroFlowStackBLL.ServiceInterface;
+using FutroFlowStackDAL.Repository;
+using FutroFlowStackDAL.RepositoryInterface;
 
 namespace FutroFlowStackAPI.Extensions
 {
@@ -23,8 +27,9 @@ namespace FutroFlowStackAPI.Extensions
 
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)
         {
-            //services.AddScoped<IService, Service>();
-            //services.AddScoped<IRepository, Repository>();
+
+            services.AddScoped<IDashboardRepository, DashboardRepository>();
+            services.AddScoped<IDashboardService, DashboardService>();
         }
 
         public static void ConfigureAutoMapper(this IServiceCollection services)

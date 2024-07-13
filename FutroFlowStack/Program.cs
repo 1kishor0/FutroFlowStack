@@ -15,6 +15,8 @@ builder.Services.ConfigureCors(corsPolicy);
 builder.Services.ConfigureRepositoryWrapper();
 builder.Services.Configure<object>(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddHttpContextAccessor();
+builder.Services.ConfigureAutoMapper();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -15,5 +15,15 @@ namespace FutroFlowStack.Controllers
 
             _Dashboardservice = service;
         }
+
+
+        [HttpPost]
+        [Route("GetHomePage")]
+        public IActionResult GetHomePage(int token)
+        {
+            return Ok(token+20);
+
+
+        }
     }
 }
